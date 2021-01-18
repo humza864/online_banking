@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="withdraw.WithdrawAmountController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="760.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Pane layoutX="180.0" prefHeight="506.0" prefWidth="400.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="62.0" layoutY="45.0" text="Withdraw Amount">
+                     <font>
+                        <Font name="Impact" size="38.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="62.0" layoutY="121.0" text="Your Account No:">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="62.0" layoutY="171.0" text="Current Balance:">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAccountNo" layoutX="217.0" layoutY="112.0" text="000000">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBalance" layoutX="236.0" layoutY="166.0" text="00000">
+                     <font>
+                        <Font name="Arial Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtAmount" focusColor="#007ff5" labelFloat="true" layoutX="64.0" layoutY="223.0" prefHeight="32.0" prefWidth="300.0" promptText="Amount" unFocusColor="#007ff5">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtPIN" focusColor="#007ff5" labelFloat="true" layoutX="64.0" layoutY="297.0" prefHeight="32.0" prefWidth="300.0" promptText="Account PIN" unFocusColor="#007ff5">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <Button layoutX="97.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#withdrawButton" prefHeight="40.0" prefWidth="200.0" styleClass="login-button" stylesheets="@../design/design.css" text=" Withdraw">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ARROW_DOWN" size="20" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Bold" size="28.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIconView glyphName="MONEY" layoutX="31.0" layoutY="253.0" size="18" />
+                  <FontAwesomeIconView glyphName="EYE" layoutX="31.0" layoutY="325.0" size="20" text="" />
+                  <Label layoutX="217.0" layoutY="166.0" text="\$">
+                     <font>
+                        <Font name="Arial Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
